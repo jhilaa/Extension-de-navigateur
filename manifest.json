@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "La note juste",
+  "version": "1.0",
+  "description": "Juste une prise de note",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"]
+    }
+  ],
+  "icons": {
+    "128": "128.png",
+    "48": "48.png",
+    "16": "16.png"
+  },
+  "browser_action": {
+    "default_icon": "16.png"
+  },
+  "permissions": ["tabs", "activeTab", "storage"]
+}
